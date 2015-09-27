@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Pizza {
+
+    String name;
+
+    List<Sauce.SAUCE> sauceList = new ArrayList<Sauce.SAUCE>();
+    List<Base.BASE> baseList = new ArrayList<Base.BASE>();
+    List<Toppings.TOPPING> toppingsList = new ArrayList<Toppings.TOPPING>();
+
+    public List<Sauce.SAUCE> getSauce() {
+        return sauceList;
+    }
+
+    public void setSauce(Sauce.SAUCE sauce) {
+        sauceList.add(sauce);
+    }
+
+    public List<Toppings.TOPPING> getToppings() {
+        return toppingsList;
+    }
+
+    public void setToppings(Toppings.TOPPING topping) {
+        toppingsList.add(topping);
+
+    }
+    public List<Base.BASE> getBase() {
+        return baseList;
+    }
+
+    public void setBase(Base.BASE base) {
+        baseList.add(base);
+    }
+
+
+    String getName() {
+        return name;
+    }
+
+    public String toString() {
+        return getName() + " " + getToppings() + " " + getBase() + " " + getSauce();
+    }
+}
+

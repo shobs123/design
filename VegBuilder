@@ -1,0 +1,26 @@
+
+public class VegSpecialBuilder extends PizzaBuilder {
+
+    @Override
+    public VegSpecialBuilder addSauce(Sauce.SAUCE sauce) {
+        pizza.setSauce(sauce);
+        return this;
+    }
+
+    @Override
+    public VegSpecialBuilder addBase(Base.BASE base) {
+        pizza.setBase(base);
+        return this;
+    }
+
+    @Override
+    public VegSpecialBuilder addToppings(Toppings.TOPPING topping) {
+        pizza.setToppings(topping);
+        return this;
+    }
+
+    @Override
+    public Pizza build() {
+        return pizza;
+    }
+}

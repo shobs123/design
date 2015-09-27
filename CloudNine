@@ -1,0 +1,8 @@
+public class CloudNine extends Pizza implements VegSpecial {
+
+    public CloudNine() {
+        this.name = NAME.concat("_CloudNine");
+    }
+
+}
+

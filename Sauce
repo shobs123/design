@@ -1,0 +1,8 @@
+public class Sauce {
+
+
+   public enum SAUCE{
+        WHITE,YELLOW,GREEN;
+    }
+
+}

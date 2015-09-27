@@ -1,0 +1,33 @@
+
+public class Waiter {
+
+    private PizzaBuilder pizzaBuilder;
+
+    public void setPizzaBuilder(PizzaBuilder pb) {
+        pizzaBuilder = pb;
+    }
+
+    public Pizza getPizza() {
+        return pizzaBuilder.getPizza();
+    }
+
+    public void makePizza(String pizzaName) {
+        Pizza p = null;
+
+        if(pizzaName.equals("VegExtra")) {
+            p = new VegExtra();
+            pizzaBuilder.pizza = p;
+            pizzaBuilder.addSauce(Sauce.SAUCE.GREEN).addSauce(Sauce.SAUCE.WHITE).addToppings(Toppings.TOPPING.PANEER).addBase(Base.BASE.ITALIAN);
+        } else if (pizzaName.equals("ChegVeg")) {
+            p = new ChefVeg();
+            pizzaBuilder.pizza = p;
+            pizzaBuilder.addSauce(Sauce.SAUCE.GREEN).addSauce(Sauce.SAUCE.YELLOW).addToppings(Toppings.TOPPING.CHILLI).addBase(Base.BASE.THIN);
+        } else if (pizzaName.equals("CloudNine")) {
+            p = new CloudNine();
+            pizzaBuilder.pizza = p;
+            pizzaBuilder.addSauce(Sauce.SAUCE.WHITE).addSauce(Sauce.SAUCE.YELLOW).addToppings(Toppings.TOPPING.CHEEZE).addBase(Base.BASE.WHEAT);
+        }
+
+        pizzaBuilder.build();
+    }
+}

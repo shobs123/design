@@ -1,0 +1,11 @@
+public class Toppings {
+
+
+    public enum  TOPPING{
+        CHEEZE,PANEER,JALAPHENO,TOMATO,CHILLI;
+    }
+
+    public     Toppings() {
+
+    }
+}

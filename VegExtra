@@ -1,0 +1,8 @@
+public class VegExtra extends Pizza implements VegSpecial {
+
+
+    public VegExtra(){
+        this.name = NAME.concat("_VegExtra");
+    }
+
+}

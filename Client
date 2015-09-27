@@ -1,0 +1,13 @@
+public class Client {
+
+    public static void main(String args[]) {
+        Client c = new Client();
+        c.OrderPizza();
+    }
+
+    public void OrderPizza() {
+        Waiter w = new Waiter();
+        w.setPizzaBuilder(new VegSpecialBuilder());
+        w.makePizza("VegExtra");
+    }
+}

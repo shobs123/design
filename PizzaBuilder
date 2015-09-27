@@ -1,0 +1,12 @@
+public abstract class PizzaBuilder {
+    Pizza pizza;
+    public abstract PizzaBuilder addSauce(Sauce.SAUCE sauce);
+    public abstract PizzaBuilder addBase(Base.BASE base);
+    public abstract PizzaBuilder addToppings(Toppings.TOPPING topping);
+    public abstract Pizza build();
+    public Pizza getPizza() {
+        return pizza;
+    }
+
+
+}
