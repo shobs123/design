@@ -1,0 +1,4 @@
+public interface VegSpecial {
+
+    String NAME = "VEGSPECIAL";
+}
